@@ -13,5 +13,16 @@
         <p>
             Hello {{ $name }}. I'm {{ $age }} years old!
         </p>
+        <div>
+            <ul>
+                @foreach ($books as $book)
+                    <li>
+                        <a href="{{ route ('single-book', ['id' => $book->id]) }}">
+                            {{ $book->title}}
+                        </a>
+                    </li>
+                @endforeach
+            </ul>
+        </div>
     </body>
 </html>

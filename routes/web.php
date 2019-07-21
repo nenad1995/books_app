@@ -14,11 +14,13 @@
 Route::get('/', function () {
     $name = 'Nenad';
     $age = 24;
+    $books = DB::table('books')->get();
 
     return view('welcome', compact(
         [
             'name',
-            'age'
+            'age',
+            'books'
         ]));
 });
 
@@ -26,3 +28,9 @@ Route::get('/about', function () {
 
     return view('about');
 });
+
+Route::get('/books/{id}',['as' => 'single-book', function ($id){
+    $book = DB::table('books')->find($id);
+
+    return view('single-book',compact('book'));
+}]);
