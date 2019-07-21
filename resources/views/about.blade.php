@@ -4,14 +4,9 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <title>Welcome</title>
+        <title>About</title>
     </head>
     <body>
-        <h1>
-            Welcome
-        </h1>
-        <p>
-            Hello {{ $name }}. I'm {{ $age }} years old!
-        </p>
+        <h1>This is about page</h1>
     </body>
 </html>
